@@ -7,20 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B17B42B17920550009D8584 /* kernels.cl in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3B8716FA177F5E230044FB61 /* kernels.cl */; };
 		3B8716F0177F5D1A0044FB61 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B8716EF177F5D1A0044FB61 /* main.c */; };
-		3B8716F2177F5D1A0044FB61 /* OpenCL_Routing.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3B8716F1177F5D1A0044FB61 /* OpenCL_Routing.1 */; };
+		3B8716F9177F5D990044FB61 /* OpenCL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8716F8177F5D990044FB61 /* OpenCL.framework */; };
+		3B8716FB177F5E230044FB61 /* kernels.cl in Sources */ = {isa = PBXBuildFile; fileRef = 3B8716FA177F5E230044FB61 /* kernels.cl */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		3B8716EA177F5D1A0044FB61 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 7;
 			files = (
-				3B8716F2177F5D1A0044FB61 /* OpenCL_Routing.1 in CopyFiles */,
+				3B17B42B17920550009D8584 /* kernels.cl in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -28,6 +30,8 @@
 		3B8716EC177F5D1A0044FB61 /* OpenCL Routing */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "OpenCL Routing"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B8716EF177F5D1A0044FB61 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		3B8716F1177F5D1A0044FB61 /* OpenCL_Routing.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = OpenCL_Routing.1; sourceTree = "<group>"; };
+		3B8716F8177F5D990044FB61 /* OpenCL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenCL.framework; path = System/Library/Frameworks/OpenCL.framework; sourceTree = SDKROOT; };
+		3B8716FA177F5E230044FB61 /* kernels.cl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.opencl; path = kernels.cl; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B8716F9177F5D990044FB61 /* OpenCL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,7 @@
 		3B8716E3177F5D1A0044FB61 = {
 			isa = PBXGroup;
 			children = (
+				3B8716F8177F5D990044FB61 /* OpenCL.framework */,
 				3B8716EE177F5D1A0044FB61 /* OpenCL Routing */,
 				3B8716ED177F5D1A0044FB61 /* Products */,
 			);
@@ -61,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				3B8716EF177F5D1A0044FB61 /* main.c */,
+				3B8716FA177F5E230044FB61 /* kernels.cl */,
 				3B8716F1177F5D1A0044FB61 /* OpenCL_Routing.1 */,
 			);
 			path = "OpenCL Routing";
@@ -118,6 +125,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B8716F0177F5D1A0044FB61 /* main.c in Sources */,
+				3B8716FB177F5E230044FB61 /* kernels.cl in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +194,7 @@
 		3B8716F6177F5D1A0044FB61 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				OPENCL_ARCHS = "x86_64 gpu_32";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -193,6 +202,7 @@
 		3B8716F7177F5D1A0044FB61 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				OPENCL_ARCHS = "x86_64 gpu_32";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -216,6 +226,7 @@
 				3B8716F7177F5D1A0044FB61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
